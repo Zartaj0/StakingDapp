@@ -25,7 +25,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "localhost";
+const defaultNetwork = "goerli";
 
 const mainnetGwei = 115;
 
@@ -51,6 +51,11 @@ module.exports = {
   // (you will need to restart the `yarn run start` dev server after editing the .env)
 
   networks: {
+    ganache:{
+      url:"HTTP://127.0.0.1:7545",
+
+
+    },
     localhost: {
       url: "http://localhost:8545",
       // notice no mnemonic here? it will just use account 0 of the hardhat node to deploy
